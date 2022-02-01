@@ -1,4 +1,4 @@
-# Transform Art
+# Transform Art 🎨
 TransformArt is a business of art, that transform your art or every product that you want in something unique, that will transform your future in a better future, at least in something more beautiful.
 
 ## Before the usage
@@ -15,17 +15,11 @@ in this route: ./
 
 ## Usage (run this commands in the terminal)
   ### Tests
-    ```js
-      npm run test
-    ```
+    npm run test
   ### Develop
-    ```js
-      npm run dev
-    ```
+    npm run dev
   ### Prod
-    ```js
-      npm start
-    ```
+    npm start
 
 ## Dependencies of this project
 
@@ -55,4 +49,3 @@ in this route: ./
 
 9. supertest
   An application for unit testing to express
-  
