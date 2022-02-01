@@ -2,7 +2,7 @@ const mysql = require("mysql");
 const { database } = require("./keys");
 const { promisify } = require("util");
 
-const pool = mysql.createPool(database); // hilos para ejecutar en secuencia
+const pool = mysql.createPool(database); // hilos para ejecutar en secuencia simula en prod
 
 pool.getConnection((error, connection) => {
   if (error) {
