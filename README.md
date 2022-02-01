@@ -15,17 +15,17 @@ in this route: ./
 
 ## Usage (run this commands in the terminal)
   ### Tests
-    js`
+    ```js
       npm run test
-    `
+    ```
   ### Develop
-    js`
+    ```js
       npm run dev
-    `
+    ```
   ### Prod
-    js`
+    ```js
       npm start
-    `
+    ```
 
 ## Dependencies of this project
 
