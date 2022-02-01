@@ -27,29 +27,29 @@ in this route: ./
 
 ## Dependencies of this project
 
-1. express-session
+1. express-session:
   This will be the controller of my login sessions with express.
 
-2. mysql
+2. mysql:
   This give permission to connections of sql and my app, (that is ideal for do successfully queries).
 
-3. express-mysql-session
+3. express-mysql-session:
   A module that insert of sessions in the database, no in the server -> For production.
 
-4. morgan
+4. morgan:
   It allows create logs or messages of what my applications are requesting to the server.
 
-5. bcryptjs
+5. bcryptjs:
   This module will we use for encrypt the passwords of our users before of save in the database.
 
-6. passport-local
+6. passport-local:
   For Do all authentication of local way(with email and password).
 
-7. connect-flash
+7. connect-flash:
   Will we use this module to show an error and success messages when the user do an any operation.
 
-8. express-validator
+8. express-validator:
   Automatization when we validate the format of emails, etc, passwords, the real values of our information.
 
-9. supertest
+9. supertest:
   An application for unit testing to express
