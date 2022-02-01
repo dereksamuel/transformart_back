@@ -6,12 +6,16 @@ Before of all, please create a .env.dev file and if you want run this applicatio
 in this route: ./
 
 * Content of .env file:
-  ENVIRONMENT=prod
-  PORT=4000
+  ```
+    ENVIRONMENT=prod
+    PORT=4000
+  ```
 
 * Content of .env.dev file:
-  ENVIRONMENT=dev
-  PORT=4000
+  ```
+    ENVIRONMENT=dev
+    PORT=4000
+  ```
 
 ## Usage (run this commands in the terminal)
   ### Tests
