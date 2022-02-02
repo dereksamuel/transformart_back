@@ -7,9 +7,11 @@ require("dotenv").config({
 const express = require("express");
 const morgan = require("morgan");
 const pool = require("./services/index");
+const apiRouter = require("./routes");
 
 // initializations
 const app = express();
+apiRouter(app);
 
 // middlewares // When send a petition to a server
 app.use(morgan(process.env.ENVIRONMENT ? "dev" : "prod"));
