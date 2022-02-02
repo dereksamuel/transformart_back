@@ -4,7 +4,7 @@
   "description": "This is an application did use by users of TransformArt, lovers of art, normal people, etc...",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/test/ --dev",
+    "test": "mocha src/test/ --timeout 10000 --dev",
     "dev": "nodemon src/ --dev",
     "start": "node src/ --prod"
   },

@@ -1,8 +1,8 @@
 const mysql = require("mysql");
-const { database } = require("./keys");
+const { databaseConfig } = require("./keys");
 const { promisify } = require("util");
 
-const pool = mysql.createPool(database); // hilos para ejecutar en secuencia simula en prod
+const pool = mysql.createPool(databaseConfig); // hilos para ejecutar en secuencia simula en prod
 
 pool.getConnection((error, connection) => {
   if (error) {
@@ -26,11 +26,11 @@ pool.getConnection((error, connection) => {
   }
 
   if (connection) {
-    connection.release();
+    connection.release(); // suelto mi conneccion
     console.log("DB IS CONNECTED");
   }
 });
 
-pool.query = promisify(pool.query);
+pool.query = promisify(pool.query); // returns me my promise for queries that before I give a callback
 
 module.exports = pool;

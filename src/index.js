@@ -6,6 +6,7 @@ require("dotenv").config({
 
 const express = require("express");
 const morgan = require("morgan");
+const pool = require("./services/index");
 
 // initializations
 const app = express();
@@ -23,4 +24,7 @@ app.listen(app.get("port"), () => {
   console.log("Listening on port", app.get("port"));
 });
 
-module.exports = app;
+module.exports = {
+  app,
+  pool
+};

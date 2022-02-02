@@ -1,7 +1,8 @@
 module.exports = {
-  database: {
-    host: "localhost",
-    user: "root",
-    password: "", // CREATE A PASSWORD IN THE FUTURE
+  databaseConfig: {
+    host: process.env.SQL_HOST,
+    user: process.env.SQL_USER,
+    password: process.env.SQL_PASSWORD,
+    database: process.env.SQL_DATABASE
   },
 };
