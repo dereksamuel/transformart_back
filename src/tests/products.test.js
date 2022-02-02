@@ -34,7 +34,7 @@ describe("---- PRODUCTS SUITE ----", () => {
     });
 
     it("product be the selected product in a list --it is only for LOCAL", () => {
-      assert.equal(products.find((localProduct) => localProduct.id === product.id), product.id);
+      assert.equal(products.body.find((localProduct) => localProduct.id === product.id), product.id);
     });
 
     it("product must be relation with category or categories", () => {
@@ -42,3 +42,5 @@ describe("---- PRODUCTS SUITE ----", () => {
     });
   });
 });
+
+// FIXME: Acceder a AWS CONNECT TOMORROW
