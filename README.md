@@ -25,7 +25,7 @@ in this route: ./
   ### Prod
     npm start
 
-## Dependencies of this project
+## Strange dependencies of this project
 
 1. express-session:
   This will be the controller of my login sessions with express.
