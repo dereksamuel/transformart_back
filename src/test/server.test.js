@@ -6,8 +6,12 @@ describe("Connection with server", () => {
     expect(Number(app.get("port"))).to.equal(4000);
   });
 
-  it("My environment equal to dev", () => {
+  it("My environment is equal to dev", () => {
     expect(process.env.ENVIRONMENT).to.equal("dev");
+  });
+
+  it("The connection of db is correct", () => {
+    // FIXME: Create db
   });
 
   after(() => {
