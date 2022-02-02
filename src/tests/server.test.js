@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/*eslint no-undef: "error"*/
+
 let expect = require("chai").expect;
 
 describe("---- SERVER SUITE ----", () => {

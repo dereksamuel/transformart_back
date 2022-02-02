@@ -1,13 +1,16 @@
+/* eslint-disable no-undef */
 const { assert } = require("chai");
 const request = require("supertest");
 
 describe("---- PRODUCTS SUITE ----", () => {
+  let products = [];
+  let product;
+
   describe("MODEL OF A PRODUCT OBJECT", () => {
     // FIXME: With joi
   });
 
   describe("/api/v1/products GET", () => {
-    let products;
     it("All Ok 200", async () => {
       products = await request(app)
         .get("/api/v1/products")
@@ -23,12 +26,15 @@ describe("---- PRODUCTS SUITE ----", () => {
   });
 
   describe("/api/v1/products/:productId GET", () => {
-    let product;
     it("All Ok 200", async () => {
       product = await request(app)
         .get("/api/v1/products/:productId")
         .expect("Content-Type", /json/)
         .expect(200);
+    });
+
+    it("product be the selected product in a list --it is only for LOCAL", () => {
+      assert.equal(products.find((localProduct) => localProduct.id === product.id), product.id);
     });
 
     it("product must be relation with category or categories", () => {
