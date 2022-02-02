@@ -2,6 +2,10 @@ const { assert } = require("chai");
 const request = require("supertest");
 
 describe("---- PRODUCTS SUITE ----", () => {
+  describe("MODEL OF A PRODUCT OBJECT", () => {
+    // FIXME: With joi
+  });
+
   describe("/api/v1/products GET", () => {
     let products;
     it("All Ok 200", async () => {
@@ -28,7 +32,7 @@ describe("---- PRODUCTS SUITE ----", () => {
     });
 
     it("product must be relation with category or categories", () => {
-      // product.categories tener misma estructura que Category of joi
+      //FIXME: product.categories tener misma estructura que Category of joi
     });
   });
 });
