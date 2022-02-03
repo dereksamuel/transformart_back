@@ -5,4 +5,7 @@ module.exports = {
     password: process.env.SQL_PASSWORD,
     database: process.env.SQL_DATABASE
   },
+  jwt: {
+    key: process.env.JWT_PASSWORD
+  },
 };

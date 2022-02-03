@@ -48,7 +48,10 @@ describe("---- PRODUCTS SUITE ----", () => {
   describe("/api/v1/products/uploadAssets POST", () => {
     it("All Ok 201", async () => {
       const response = await request(app)
-        .post("/api/v1/products/create")
+        .post("/api/v1/products/uploadAssets")
+        .set({
+          "access-token": token,
+        })
         .send({
           imgSrc: "https://blog.powerdata.es/hs-fs/hubfs/images/Dynamic_Data_Masking.jpg?width=1024&name=Dynamic_Data_Masking.jpg",
           videoSrc: "https://repositorio.konradlorenz.edu.co/micrositios/001-985/mtodos_estticos.html"
@@ -63,10 +66,22 @@ describe("---- PRODUCTS SUITE ----", () => {
 
     it("uploaded img and video to the correct domain", () => {
       // eslint-disable-next-line no-useless-escape
-      const domainRegex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]twitter+)\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+      const domainRegex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]w3schools+)\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
       
-      assert.isTrue(domainRegex.test(unsplashImageSrc));
-      assert.isTrue(domainRegex.test(unsplashVideoSrc));
+      assert.isOk(unsplashImageSrc.match(domainRegex));
+      assert.isOk(unsplashVideoSrc.match(domainRegex));
+    });
+
+    it("verify that img is really a image", () => {
+      const isImageRegex = /(?:((?:https|http):\/\/)|(?:\/)).+(?:.gif|jpe?g|bmp|png)/gm;
+
+      assert.isOk(unsplashImageSrc.match(isImageRegex));
+    });
+
+    it("verify that videoSrc is really a video", () => {
+      const isVideoRegex = /(?:((?:https|http):\/\/)|(?:\/)).+(?:.mp4)/gm;
+
+      assert.isOk(unsplashVideoSrc.match(isVideoRegex));
     });
   });
 

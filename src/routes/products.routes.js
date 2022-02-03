@@ -49,4 +49,21 @@ router.get("/:productId", (req, res) => {
   });
 });
 
+router.post("/uploadAssets", (req, res) => {
+  //FIXME: ADD THIS AND FILES const { imgSrc, videoSrc } = req.body;
+
+  res.status(201).send({
+    imageSrcUploaded: "https://www.w3schools.com/tags/img_girl.jpg",
+    videoSrcUploaded: "https://www.w3schools.com/tags/movie.mp4"
+  });
+});
+
+
+router.post("/create", (req, res) => {
+  res.status(201).send({
+    message: "product created",
+    body: req.body,
+  });
+});
+
 module.exports = router;
